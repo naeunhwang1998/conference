@@ -20,7 +20,7 @@ In this table, green favours RDP. Compared with open surgery, RDP has less blood
 **Cost-effectiveness (1:50–2:15)** *[Cost tiles]*
 The robot costs more in theatre. However, its overall cost is similar to laparoscopy and lower than open surgery, because the shorter stay, fewer conversions and lower morbidity offset that cost. Costs also fall as case volume grows. RDP also gives more quality-adjusted life years than laparoscopy at a similar cost, which the multicentre ROBOCOSTES study supports.
 
-**Challenges and other platforms (2:15–2:40)** *[Challenges, Platforms table]*
+**Challenges and other platforms (2:15–2:40)** *[Challenges; Platforms note under Why robotic?]*
 The main challenges are a longer learning curve, the need for a dedicated, trained robotic team, few training centres, and unequal access, as robots are concentrated in wealthier health systems. Almost all evidence comes from the da Vinci platform. Newer systems such as Versius and hinotori have only early case reports.
 
 **Conclusion (2:40–3:00)** *[Conclusion box]*
