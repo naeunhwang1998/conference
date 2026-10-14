@@ -6,7 +6,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 src = open(os.path.join(HERE, "build.py"), encoding="utf-8").read()
 exec(src[:src.index("S = []")])  # shared XML helpers: run, para, ph, box, cell, table, pic, e, EMU ...
 
-U, FIG, ICONS, QR = sys.argv[1:5]
+U, FIG, ICONS, QR, LOGOS = sys.argv[1:6]
 NAVY, GOLD = "213C80", "BB890B"
 TXT, MUTED = "1F2937", "5B6472"
 TINT = "EEF1F8"
@@ -24,15 +24,24 @@ L, R_ = 0.75, 11.43
 W = R_ - L
 
 # ---------- title block (template placeholders on the gold band) ----------
-S.append(ph(26, "Title", 4.51, 0.38, 7.33, 1.43,
+S.append(ph(26, "Title", 4.51, 0.3, 7.33, 1.25,
             [para(run("Clinical review of robotic distal pancreatectomy", sz=28, b=True))], anchor="b"))
 sup = lambda s: run(s, sz=13, baseline="30000")
-S.append(ph(27, "Authors", 4.51, 1.95, 7.33, 0.6,
+S.append(ph(27, "Authors", 4.51, 1.62, 7.33, 0.42,
             [para(run("Naeun Hwang", sz=16, b=True) + sup("1") + run(", Sam Reddish", sz=16, b=True) + sup("1") +
                   run(", Jonathan Koea", sz=16, b=True) + sup("1,2") + run(", Sanket Srinivasa", sz=16, b=True) + sup("1,2"))]))
-S.append(ph(25, "Affiliations", 4.51, 2.62, 7.33, 1.1,
+S.append(ph(25, "Affiliations", 4.51, 2.08, 7.33, 0.62,
             [para(sup("1") + run("Upper GI Unit, Department of Surgery, Te Whatu Ora Waitematā, Auckland, New Zealand", sz=12), after=2),
              para(sup("2") + run("Department of Surgery, University of Auckland, Auckland, New Zealand", sz=12))]))
+
+# institutional logos (cropped from the supplied images)
+LY, LH = 2.86, 0.98
+uw = (LH - 0.1) * 327 / 146
+S.append(box("UoA logo tile", 4.6, LY, uw + 0.1, LH, None, fill="0B0C45", geom="roundRect", adj=8000))
+S.append(pic(img("UoA", os.path.join(LOGOS, "uoa.png")), "University of Auckland logo", "Waipapa Taumata Rau University of Auckland logo", 4.65, LY + 0.05, uw, LH - 0.1))
+hx = 4.6 + uw + 0.1 + 0.25; hh = 0.5; hw = hh * 685 / 132
+S.append(box("Health NZ logo tile", hx, LY, hw + 0.4, LH, None, fill="FFFFFF", geom="roundRect", adj=8000))
+S.append(pic(img("HNZ", os.path.join(LOGOS, "hnz.png")), "Health New Zealand logo", "Health New Zealand Te Whatu Ora logo", hx + 0.2, LY + (LH - hh) / 2, hw, hh))
 
 # ---------- key message + stats ----------
 y = 4.62
