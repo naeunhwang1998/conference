@@ -1,7 +1,7 @@
 # 3-minute oral presentation script: single-column ePoster
 
 **Clinical review of robotic distal pancreatectomy**, IHPBA 2026
-About 330 spoken words, sized for about 2:45 at your speaking pace (~120 words per minute), which leaves about 15 seconds of slack. *[Brackets]* show where to point on the poster.
+About 285 spoken words. At your pace (about 120 words per minute) that is roughly 2:25, which leaves time for pointing and pauses. *[Brackets]* show where to point on the poster.
 
 ---
 
